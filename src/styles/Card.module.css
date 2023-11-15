@@ -1,0 +1,71 @@
+.card.hide {
+    scale: 0;
+    transition: all .6 ease-in;
+}
+
+.card {
+    position: relative;
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: var(--border-radius);
+
+    font-size: 2rem;
+    text-align: center;
+
+    transform: rotateY(180deg);
+
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--primary-color-rgb));
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.card:hover {
+    filter: brightness(.8);
+}
+
+.card.open {
+    transform: rotateY(0deg);
+}
+
+.open::after,
+.match::after {
+    transform: rotateY(180deg);
+}
+
+.card.match {
+    cursor: auto;
+}
+
+.card.match:hover {
+    filter: brightness(1);
+    animation: none;
+}
+
+.card.match:active {
+    scale: 1;
+}
+
+.card:active {
+    scale: 0.9;
+}
+
+.card::selection {
+    background: white;
+    color: var(--primary-color-rgb);
+}

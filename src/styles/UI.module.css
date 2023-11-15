@@ -1,0 +1,16 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.d-none {
+    display: none;
+}

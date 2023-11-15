@@ -1,0 +1,53 @@
+.hover_shake {
+    transition: filter .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.hover_shake:hover {
+    filter: brightness(.8);
+    animation: shake .3s normal;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotateZ(0deg);
+    }
+
+    33% {
+        transform: rotateZ(5deg);
+    }
+
+    66% {
+        transform: rotateZ(-5deg);
+    }
+}
+
+.active_pulse {
+    transition: filter .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.active_pulse:active {
+    filter: brightness(.8);
+    animation: pulse .5s normal;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        scale: 1;
+    }
+
+    25% {
+        scale: 0.8
+    }
+
+    80% {
+        scale: 1.1
+    }
+
+    90% {
+        scale: 1.05
+    }
+}
